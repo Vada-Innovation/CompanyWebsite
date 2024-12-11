@@ -1,5 +1,10 @@
 'use client'
 
+import clsx from 'clsx'
+import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   createContext,
   useContext,
@@ -8,16 +13,11 @@ import {
   useRef,
   useState,
 } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 
@@ -69,16 +69,14 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logomark
-            className="h-8 sm:hidden"
-            invert={invert}
-            filled={logoHovered}
+          <Image
+            src="/brand.svg"
+            width={150}
+            height={30}
+            alt="company brand"
+            loading="lazy"
           />
-          <Logo
-            className="hidden h-8 sm:block"
-            invert={invert}
-            filled={logoHovered}
-          />
+          {/* <img src={Brand} alt="Brand Logo" className="h-8" /> */}
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
