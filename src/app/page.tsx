@@ -12,7 +12,7 @@ import { Testimonial } from '@/components/Testimonial'
 import logoBMJ from '@/images/clients/bmj-consultant/logo-light.svg'
 // import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logodeSwot from '@/images/clients/deswot/logo-light.svg'
-// import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
+// import logoFamilyFund from '@/images/clients/regnxt/logo-light.svg'
 import logoGlobalGroupOne from '@/images/clients/global-group-one/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoRegnxt from '@/images/clients/regnxt/logo-light.svg'
@@ -33,7 +33,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            We’ve worked with some of amazing people
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
