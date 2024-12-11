@@ -9,18 +9,14 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
+import logoBMJ from '@/images/clients/bmj-consultant/logo-light.svg'
+// import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logodeSwot from '@/images/clients/deswot/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
+// import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
 import logoGlobalGroupOne from '@/images/clients/global-group-one/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoRegnxt from '@/images/clients/regnxt/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+// import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -28,14 +24,7 @@ const clients = [
   ['Regnxt', logoRegnxt],
   ['Global Group One', logoGlobalGroupOne],
   ['DeSwot', logodeSwot],
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['BMJ Consultant', logoBMJ],
 ]
 
 function Clients() {
@@ -167,9 +156,9 @@ function Services() {
               used for the past six years.
             </ListItem>
             <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+              At Vada Innovation we understand the importance of having a robust
+              and customised CMS. That’s why we run all of our client projects
+              out of a single, enormous Joomla instance.
             </ListItem>
           </List>
         </div>
@@ -208,9 +197,9 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        The team at Vada Innovation went above and beyond with our onboarding,
+        even finding a way to access the user’s microphone without triggering
+        one of those annoying permission dialogs.
       </Testimonial>
 
       <Services />
