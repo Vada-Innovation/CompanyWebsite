@@ -10,7 +10,9 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
+import logodeSwot from '@/images/clients/deswot/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
+import logoGlobalGroupOne from '@/images/clients/global-group-one/logo-light.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
@@ -24,6 +26,8 @@ import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
   ['Regnxt', logoRegnxt],
+  ['Global Group One', logoGlobalGroupOne],
+  ['DeSwot', logodeSwot],
   ['Phobia', logoPhobiaLight],
   ['Family Fund', logoFamilyFund],
   ['Unseal', logoUnseal],
