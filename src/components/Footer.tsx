@@ -11,7 +11,7 @@ const navigation = [
     links: [
       { title: 'RegNXT', href: '/work/regnxt' },
       { title: 'Global Group One', href: '/work/global-group-one' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'BMJ Consultants', href: '/work/bmj-consultant' },
       {
         title: (
           <>

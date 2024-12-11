@@ -9,10 +9,10 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
+import logoDarkBMJ from '@/images/clients/bmj-consultant/logo-dark.svg'
 import logoBMJ from '@/images/clients/bmj-consultant/logo-light.svg'
 import logodeSwot from '@/images/clients/deswot/logo-light.svg'
 import logoGlobalGroupOne from '@/images/clients/global-group-one/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoRegnxt from '@/images/clients/regnxt/logo-light.svg'
 // import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 // import logoFamilyFund from '@/images/clients/regnxt/logo-light.svg'
@@ -195,7 +195,7 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'BMJ Consultant', logo: logoDarkBMJ }}
       >
         The team at Vada Innovation went above and beyond with our onboarding,
         even finding a way to access the user’s microphone without triggering
