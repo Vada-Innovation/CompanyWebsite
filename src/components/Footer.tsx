@@ -10,7 +10,7 @@ const navigation = [
     title: 'Work',
     links: [
       { title: 'RegNXT', href: '/work/regnxt' },
-      { title: 'Unseal', href: '/work/unseal' },
+      { title: 'Global Group One', href: '/work/global-group-one' },
       { title: 'Phobia', href: '/work/phobia' },
       {
         title: (
