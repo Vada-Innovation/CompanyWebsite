@@ -1,14 +1,14 @@
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
+import imageAbdullahMujahid from '@/images/team/abdullah-mujahid.jpg'
 
 export const article = {
-  date: '2023-04-06',
-  title: 'The Future of Web Development: Our Predictions for 2023',
+  date: '2024-09-04',
+  title: 'Docker 101: From Tugboat to Container Ship',
   description:
-    'Let’s explore the latest trends in web development, and regurgitate some predictions we read on X for how they will shape the industry in the coming year.',
+    'A comprehensive guide to understanding Docker containerization, from basic concepts to practical implementation.',
   author: {
-    name: 'Chelsea Hagon',
-    role: 'Senior Developer',
-    image: { src: imageChelseaHagon },
+    name: 'Abdullah Mujahid',
+    // role: 'Co-Founder / CTO',
+    image: { src: imageAbdullahMujahid },
   },
 }
 
@@ -17,32 +17,97 @@ export const metadata = {
   description: article.description,
 }
 
-## 1. AI Assisted Development
+# Docker 101: From Tugboat to Container Ship
 
-With the launch of Github Copilot in 2022 the industry got its first glimpse at what it would look like to have Stack Overflow plumbed straight into your IDE. Copilot has given thousands of developers what they always longed for: plausible deniability over the bugs they write.
+![](./docker.png)
 
-![](./pilot.jpg)
+Hello there👨! Ready to dive into the ocean of containerization? Well, grab your life jackets because we're about to set sail with Docker! 🚢
 
-In 2023 we can expect these assistants to become more sophisticated and for that to have ripple effects throughout the industry.
+## What is Docker?
 
-We predict that traffic to MDN will decline precipitously as developers realise they no longer need to look up JS array methods. We also expect Stack Overflow’s sister site, Prompt Overflow, to become one of the most popular sites on the internet in a matter of months.
+Docker is like a magical shipping container for your code. It packages up your application and all its dependencies into a standardized unit called a container. These containers are lightweight, portable, and can run anywhere from your laptop to a server in the cloud. It's like giving your app a cosy little house that it can take anywhere!
 
-## 2. Rendering Patterns
+## Why should you give a dock about Docker?
 
-To server render or not to server render? In 2022 the owners of the internet, Vercel, decided that instead of making this choice once for your whole application, now you will need to decide every time you write a new component.
+- **Consistency**: "It works on my machine" is no longer an excuse. With Docker, if it works in your container, it'll work everywhere. It's like having a universal adapter for your code!
+- **Isolation**: Each container is like its own little world. No more "stop hitting yourself" moments when one app interferes with another.
+- **Efficiency**: Containers share the host system's kernel, making them lighter and faster than traditional VMs. It's like carpooling for your apps!
+- **Scalability**: Need more power? Just spin up more containers. It's like cloning your app, minus the ethical dilemmas.
 
-Because front-end development was becoming too easy, the same people who write CSS will now need to know how Streaming SSR and Progressive Hydration work.
+## Docker in Action: A Whale of a Tale
 
-![](./server.jpg)
+Let's say you have a simple Python web app. Here's how you might "Dockerize" it (i.e., prepare it to run in a Docker container):
 
-In 2023 we can expect frameworks to adopt increasingly granular rendering patterns culminating in per-line rendering (PLR) later this year. We can also expect job postings for Rendering Reliability Engineers to reach an all time high.
+```dockerfile
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
 
-## 3. JS Runtimes
+# Set the working directory in the container
+WORKDIR /app
 
-Because choosing a JS runtime was one of the only areas where a developer wasn’t paralysed with choice, in early 2020, the creator of Node gave us something new to agonise over. The launch of Deno and Bun heralded the final mutation of JavaScript into a language that can truly run anywhere it wasn’t intended to.
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-These new JS runtimes mean we can now serve HTML faster than ever before. For example, we’ve reduced the Time to First Byte (TTFB) of this blog to -0.4s. That means it actually loaded before you clicked the link.
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-![](./laptop.jpg)
+# Make port 80 available to the world outside this container
+EXPOSE 80
 
-In 2023 we can expect even faster and more specialised JS runtimes to launch, including the promising Boil, a runtime specifically designed to reduce cold boot times on WiFi enabled kettles. All of these advancements promise to make the future of botnets a truly exciting one.
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+```
+
+This Dockerfile is like a recipe for your container. It tells Docker:
+
+1. Start with a Python image (it's like choosing your base ingredients)
+2. Set up a workspace (preheating the oven)
+3. Copy in your code (adding the secret sauce)
+4. Install dependencies (mixing in the spices)
+5. Open up a port (setting the table)
+6. Run your app (serving the dish)
+
+To build and run this container, you'd use:
+
+```bash
+docker build -t my-python-app .
+docker run -p 4000:80 my-python-app
+```
+
+## Docker Compose: The orchestra conductor for your containers
+
+But wait, there's more! Enter Docker Compose, the tool that helps you manage multi-container applications. It's like a party planner for your containers, making sure everyone shows up and plays nice together.
+
+With a simple YAML file, you can define and run all the services your app needs:
+
+```yaml
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - '5000:5000'
+  redis:
+    image: 'redis:alpine'
+```
+
+This Docker Compose file is saying, "Hey, let's have a party with a web service and a Redis database. They'll be best friends!"
+
+To start this multi-container shindig, just run:
+
+```bash
+docker-compose up
+```
+
+And boom! You've got a full application stack running faster than you can say "Containerize me, captain!"
+
+## Conclusion
+
+Docker has revolutionized how we develop, ship, and run applications. It's solved the age-old problem of "but it works on my machine" and made deploying applications smoother than a freshly waxed whale.
+
+Docker can help you swim through the choppy seas of modern software development. It's time to quit wading in the shallow end and dive deep into the world of containerization!
+
+Now go forth and containerize! And may the pods be ever in your favour! 🐳
