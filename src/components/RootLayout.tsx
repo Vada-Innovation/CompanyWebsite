@@ -79,7 +79,7 @@ function Header({
           {/* <img src={Brand} alt="Brand Logo" className="h-8" /> */}
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
+          <Button href="/contact-select" invert={invert}>
             Contact us
           </Button>
           <button
@@ -146,10 +146,11 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/students">Students</NavigationItem>
+        <NavigationItem href="/students">Student Support</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/contact-select">Get In Touch</NavigationItem>
       </NavigationRow>
     </nav>
   )

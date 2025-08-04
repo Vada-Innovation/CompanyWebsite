@@ -169,63 +169,100 @@ function Services() {
 
 function StudentsSection() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Supporting students for a better tomorrow
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <div className="mt-10 lg:flex lg:items-center lg:gap-x-8">
+    <>
+      <SectionIntro
+        eyebrow="Education & Research"
+        title="Building tomorrow through academic excellence"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          Beyond technology solutions, we&apos;re committed to fostering the next 
+          generation of innovators. Our student support program bridges the gap 
+          between academic potential and real-world impact.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <div className="lg:flex lg:items-start lg:gap-x-8">
           <div className="lg:w-1/2">
             <FadeIn>
-              <h3 className="font-display text-3xl font-medium text-white sm:text-4xl">
-                Empowering Research & Education
-              </h3>
-              <p className="mt-6 text-lg text-neutral-300">
-                We believe in the power of education to transform lives. Our mission 
-                is to help students excel in research, provide grants and scholarships 
-                to deserving candidates, and support them in their final stages of 
-                higher education research.
-              </p>
-              <div className="mt-8">
-                <Link
-                  href="/students"
-                  className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
-                >
-                  Learn more about our student programs
-                </Link>
+              <div className="rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600">
+                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                    </svg>
+                  </div>
+                  <h3 className="font-display text-2xl font-semibold text-neutral-950">
+                    Student Support Program
+                  </h3>
+                </div>
+                <p className="text-base text-neutral-700 mb-6">
+                  We provide comprehensive support to students pursuing research and 
+                  higher education, helping bridge the gap between academic potential 
+                  and meaningful impact.
+                </p>
+                <div className="grid grid-cols-1 gap-4 mb-8">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600">PhD Research Grants</div>
+                    <div className="text-sm text-neutral-600">Supporting final semester students</div>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <Link
+                    href="/students"
+                    className="flex-1 rounded-full border border-blue-600 px-3 py-2 text-center text-xs font-semibold text-blue-600 transition hover:bg-blue-50"
+                  >
+                    Learn More
+                  </Link>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdQ1CyKNIvYSzTJ7xN7gva-4YuraqUZTNvf58HuE_6wSzX-DQ/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-full bg-blue-600 px-3 py-2 text-center text-xs font-semibold text-white transition hover:bg-blue-500"
+                  >
+                    Apply for Grant
+                  </a>
+                  <a
+                    href="mailto:info@vadainnovation.com?subject=PhD Grant Inquiry"
+                    className="flex-1 rounded-full border border-blue-600 px-3 py-2 text-center text-xs font-semibold text-blue-600 transition hover:bg-blue-50"
+                  >
+                    Contact Us
+                  </a>
+                </div>
               </div>
             </FadeIn>
           </div>
-          <div className="mt-10 lg:mt-0 lg:w-1/2 lg:pl-8">
+          <div className="mt-8 lg:mt-0 lg:w-1/2 lg:pl-8">
             <FadeIn>
-              <List className="text-white">
-                <ListItem title="Research Support">
-                  Comprehensive assistance for student research projects across 
-                  various academic fields and disciplines.
+              <List>
+                <ListItem title="Research Guidance">
+                  Expert mentorship and methodology support for students across 
+                  various academic disciplines and research areas.
                 </ListItem>
-                <ListItem title="Grants & Scholarships">
-                  Financial support and sponsorship for deserving students in 
-                  their final stages of higher education.
+                <ListItem title="Grant Applications">
+                  Assistance with scholarship applications, research funding proposals, 
+                  and grant writing for academic projects.
                 </ListItem>
-                <ListItem title="Academic Resources">
-                  Access to cutting-edge technology, tools, and mentorship 
-                  programs to enhance learning outcomes.
+                <ListItem title="Technology Access">
+                  Providing access to cutting-edge tools, software, and technological 
+                  resources needed for modern research.
+                </ListItem>
+                <ListItem title="Final Stage Support">
+                  Specialized assistance for students in their thesis, dissertation, 
+                  or final project phases of higher education.
                 </ListItem>
               </List>
             </FadeIn>
           </div>
         </div>
       </Container>
-    </div>
+    </>
   )
 }
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'We are a development studio creating technology solutions for businesses while empowering students through research support, grants, and academic assistance programs.',
 }
 
 export default async function Home() {
@@ -236,11 +273,12 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            One place for all your software problems.
+            Innovation for business. Support for students.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. We are here to help solve your problems .
+            We are a development studio creating technology solutions for businesses 
+            while empowering the next generation of researchers and innovators through 
+            our student support programs.
           </p>
         </FadeIn>
       </Container>
