@@ -152,18 +152,74 @@ function Services() {
             </ListItem>
             <ListItem title="E-commerce">
               We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
+              mainly means adding your logo to the Shopify store template we&apos;ve
               used for the past six years.
             </ListItem>
             <ListItem title="Custom content management">
               At Vada Innovation we understand the importance of having a robust
-              and customised CMS. That’s why we run all of our client projects
+              and customised CMS. That&apos;s why we run all of our client projects
               out of a single, enormous Joomla instance.
             </ListItem>
           </List>
         </div>
       </Container>
     </>
+  )
+}
+
+function StudentsSection() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+      <Container>
+        <FadeIn className="flex items-center gap-x-8">
+          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+            Supporting students for a better tomorrow
+          </h2>
+          <div className="h-px flex-auto bg-neutral-800" />
+        </FadeIn>
+        <div className="mt-10 lg:flex lg:items-center lg:gap-x-8">
+          <div className="lg:w-1/2">
+            <FadeIn>
+              <h3 className="font-display text-3xl font-medium text-white sm:text-4xl">
+                Empowering Research & Education
+              </h3>
+              <p className="mt-6 text-lg text-neutral-300">
+                We believe in the power of education to transform lives. Our mission 
+                is to help students excel in research, provide grants and scholarships 
+                to deserving candidates, and support them in their final stages of 
+                higher education research.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/students"
+                  className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
+                >
+                  Learn more about our student programs
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
+          <div className="mt-10 lg:mt-0 lg:w-1/2 lg:pl-8">
+            <FadeIn>
+              <List className="text-white">
+                <ListItem title="Research Support">
+                  Comprehensive assistance for student research projects across 
+                  various academic fields and disciplines.
+                </ListItem>
+                <ListItem title="Grants & Scholarships">
+                  Financial support and sponsorship for deserving students in 
+                  their final stages of higher education.
+                </ListItem>
+                <ListItem title="Academic Resources">
+                  Access to cutting-edge technology, tools, and mentorship 
+                  programs to enhance learning outcomes.
+                </ListItem>
+              </List>
+            </FadeIn>
+          </div>
+        </div>
+      </Container>
+    </div>
   )
 }
 
@@ -203,6 +259,8 @@ export default async function Home() {
       </Testimonial>
 
       <Services />
+
+      <StudentsSection />
 
       <ContactSection />
     </>
